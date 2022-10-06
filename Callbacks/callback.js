@@ -37,9 +37,9 @@
 //output: 'world' then after three seconds 'hello'
 
 //this is known as asynchronous execution here javascript does't wait for the function 
-//A to finish its execution and the start the function B 
-//as its a event driven language that is instead of waiting for a response from function A
-//before moving on javascript will keep executing while listening for other events
+//A to finish its execution and then starts the execution of function B 
+//as js is an event driven language that is, instead of waiting for a response from function A
+//it will keep executing while listening for other events
 
 
 //now whats the solution to it ya you know it (Callback), callbacks are a way to make
