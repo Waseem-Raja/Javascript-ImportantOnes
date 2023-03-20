@@ -1,0 +1,34 @@
+function StringChallenge(sen) {
+
+  // code goes here  
+  const token = "I0kbywd78";
+  const prev = sen;
+  let arr = prev.split(' ');
+  let arr2 = arr[0].replace(/[^a-zA-Z]/g, "");
+  for (let i = 0; i < arr.length; i++) {
+    arr[i] = arr[i].replace(/[^a-zA-Z]/g, "");
+    if (arr2.length < arr[i].length) {
+      arr2 = arr[i];
+    }
+
+
+
+    // console.log(arr2);
+  }
+  function reverse(str) {
+    let stri = "";
+    for (let i = str.length - 1; i >=0; i--)
+      stri += str.charAt(i);
+    return stri;
+  }
+  let last= token+":"+arr2;
+  let output =reverse(last);
+    console.log(output)
+  return sen;
+
+}
+
+// keep this function call here 
+// console.log(StringChallenge(readline()));
+
+console.log(StringChallenge("fun&!! time"));
