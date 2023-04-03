@@ -1,7 +1,9 @@
+//CHALLENGE ONE 
 function StringChallenge(sen) {
 
-  // code goes here  
-  const token = "I0kbywd78";
+  // code goes here 
+  const token = "yhvj2tq36e5";
+
   const prev = sen;
   let arr = prev.split(' ');
   let arr2 = arr[0].replace(/[^a-zA-Z]/g, "");
@@ -10,25 +12,76 @@ function StringChallenge(sen) {
     if (arr2.length < arr[i].length) {
       arr2 = arr[i];
     }
-
-
-
-    // console.log(arr2);
   }
-  function reverse(str) {
-    let stri = "";
-    for (let i = str.length - 1; i >=0; i--)
-      stri += str.charAt(i);
-    return stri;
-  }
-  let last= token+":"+arr2;
-  let output =reverse(last);
-    console.log(output)
+
+
+let i=0;let j=0;
+let output="";
+while(i<arr2.length&&j<token.length){
+
+output+=arr2[i++]+""+token[j++];
+}
+while(i<arr2.length){
+  output+=arr2[i++];
+}
+while(j<token.length){
+  output+=token[j++];
+}
+console.log(output)
+
   return sen;
 
 }
 
 // keep this function call here 
-// console.log(StringChallenge(readline()));
+console.log(StringChallenge(readline()));
 
-console.log(StringChallenge("fun&!! time"));
+
+//CHALLENGE SECOND
+
+function StringChallenge(str) {
+
+  // code goes here  
+
+
+  var obj = {};
+  for (let i = 0; i < str.length; i++) {
+
+    if (obj[str[i]]) {
+      obj[str[i]] += obj[str[i]];
+
+    }
+    else {
+      obj[str[i]] = 1;
+    }
+
+  }
+  let output = "";
+  for (let key in obj) {
+    output += obj[key]+""+key;
+  }
+
+  let token = "yhvj2tq36e5";
+  let result = "";
+  let i = 0; let j = 0;
+  console.log(output)
+  while (i < output.length && j<token.length) {
+
+    result += output[i++]+""+token[j++];
+
+  }
+  console.log(result)
+  while (i < output.length) {
+    result += output.charAt(i);
+    i++;
+  }
+  while (j < token.length) {
+    result += token.charAt(i);
+    j++;
+  }
+  console.log(result);
+  return str;
+}
+
+// keep this function call here 
+console.log(StringChallenge(readline()));
